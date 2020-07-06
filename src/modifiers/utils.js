@@ -87,17 +87,20 @@ export function finishEdit(store) {
       newContentState,
       needRemove ? 'remove-range' : 'update-math',
     )
+    //The if condition was removed to avoid crashing
+    //When selecting outside the window while mathJax editor is open
+    store.setEditorState(newEditorState)
 
-    if (newSelection !== undefined) {
-      store.setEditorState(
-        EditorState.forceSelection(
-          newEditorState, newSelection,
-        ),
-      )
-      setTimeout(() => store.getEditorRef().focus(), 5)
-    } else {
-      store.setEditorState(newEditorState)
-    }
+    // if (newSelection !== undefined) {
+    //   store.setEditorState(
+    //     EditorState.forceSelection(
+    //       newEditorState, newSelection,
+    //     ),
+    //   )
+    //   setTimeout(() => store.getEditorRef().focus(), 5)
+    // } else {
+    //   store.setEditorState(newEditorState)
+    // }
   }
 }
 
