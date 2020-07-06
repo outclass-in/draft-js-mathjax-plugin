@@ -1,5 +1,4 @@
-// const loadScript = require('load-script')
-import load from './load'
+import load from 'scriptjs'
 
 // mathjax cdn shutdown the 30/04/2017!!! https://cdn.mathjax.org/mathjax/latest/MathJax.js
 const DEFAULT_SCRIPT = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js'

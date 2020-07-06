@@ -4,7 +4,7 @@ const commonEdit = {
   fontFamily: '\'Inconsolata\', \'Menlo\', monospace',
   fontSize: '1em',
   boxShadow: '5px 5px 5px rgba(0,0,0,0.7)',
-  background: 'yellow',
+  background: 'white',
 }
 
 const commonPreview = {
